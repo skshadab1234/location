@@ -20,7 +20,7 @@ const LocationComponent = () => {
       console.log('Geolocation is not supported by this browser.');
     }
 
-    if (latitude != null && longitude != null) {
+    
       const Store = async () => {
         const res = await fetch('https://location-server-6uel.onrender.com/loc', {
           method: "POST",
@@ -35,7 +35,7 @@ const LocationComponent = () => {
         console.log(result);
       }
       Store()
-    }
+    
 
   }, [latitude, longitude]);
 
