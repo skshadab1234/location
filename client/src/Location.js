@@ -22,7 +22,7 @@ const LocationComponent = () => {
 
     
       const Store = async () => {
-        const res = await fetch('https://location-server-6uel.onrender.com/loc', {
+        const res = await fetch('/loc', {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
