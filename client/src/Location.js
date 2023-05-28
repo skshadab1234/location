@@ -22,7 +22,7 @@ const LocationComponent = () => {
 
     if (latitude != null && longitude != null) {
       const Store = async () => {
-        const res = await fetch('/loc', {
+        const res = await fetch('https://location-server-6uel.onrender.com/loc', {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -31,6 +31,8 @@ const LocationComponent = () => {
             latitude, longitude
           })
         })
+        const result = await res.json()
+        console.log(result);
       }
       Store()
     }
