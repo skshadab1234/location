@@ -21,20 +21,20 @@ const LocationComponent = () => {
     }
 
     
-      const Store = async () => {
-        const res = await fetch('/loc', {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            latitude, longitude
-          })
-        })
-        const result = await res.json()
-        console.log(result);
-      }
-      Store()
+    const Store = async () => {
+      const res = await fetch('/loc?latitude=' + latitude + '&longitude=' + longitude, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      
+      const result = await res.json();
+      console.log(result);
+    };
+    
+    Store();
+    
     
 
   }, [latitude, longitude]);
