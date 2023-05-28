@@ -22,5 +22,9 @@ router.post('/loc', async (req, res) => {
     }
 })
 
+router.get('/hello', async (req, res) => {
+ console.log('hello');
+})
+
 
 module.exports = router
