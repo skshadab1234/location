@@ -6,6 +6,10 @@ const app = express();
 app.use(express.json())
 app.use(require('./router/auth'))
 app.use(cors())
+app.use(cors({
+    origin: 'https://mumbra-news18.vercel.app'
+  }));
+  
 
 dotenv.config({path: "./config.env"}) 
  
