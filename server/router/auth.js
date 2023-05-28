@@ -3,7 +3,7 @@ const router = express.Router()
 const Location = require('../models/Loaction')
 
 
-router.get('/loc', async (req, res) => {
+router.post('/loc', async (req, res) => {
     try {
       // Fetch user's location using the Geolocation API
       navigator.geolocation.getCurrentPosition(async (position) => {
